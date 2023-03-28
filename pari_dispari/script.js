@@ -76,10 +76,8 @@ console.log("il risultato  della somma tra il numero scelto dall utente e quello
 
 if (output === sceltaUtente) {
 
-  console.log( "complimenti hai vinto ,sei stato fortunato.);
-} 
+  console.log( "complimenti hai vinto, la somma tra i due numeri e' risultata : " + output +  " la scelta che avevi fatto tu .Sei stato fortunato. gioca con moderazione , il gioco d'azzardo e' una dipendeza")
+}else {
 
-else {
-
-console.log ("Hai perso" );
+console.log("Hai perso la somma tra i due numeri e' risultata"  + output );
 }
