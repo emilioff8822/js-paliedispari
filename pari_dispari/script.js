@@ -8,17 +8,78 @@ Dichiariamo chi ha vinto.
 
 
 
-1 chiediamo all'utente di scegliere pari o dispari
+-chiediamo all'utente di scegliere pari o dispari
 
-2 assegno la scelta opposta al computer usando l'OPERATORE TERNARIO
+- assegno la scelta opposta al computer usando l'OPERATORE TERNARIO
 
-3 chiedo all'utente di inserire un numero da 1 a 5
+- chiedo all'utente di inserire un numero da 1 a 5
 
-4 creo un numero random da 1 a 5 per il computer
+- creo un numero random da 1 a 5 per il computer
 
-5 con una funzione stabilisco se il numero e pari o dispari
+- definisco la funzione calcolapari che mi dice se un numero e' pari
 
-6 in base al risultato della somma dichiaro il vincitore
+- definisco la variabile somma come somma di numero utente e numero computer
 
+--utilizzo la funzione calcola pari per verificare se la somma finale e' pari o dispari , uso nuovamente l'operatore ternario
+
+
+- verifico se l'output e' uguale alla scelta utente (pari o dispari) per decretare chi ha vinto
 */
 
+
+//utente sceglie pari o dispari
+let sceltaUtente = prompt("Scegli pari o dispari");
+
+console.log("L'utente ha scelto: " +  sceltaUtente);
+
+//con operatore ternario il pc sceglie l'opposto
+
+let sceltaComputer = (sceltaUtente === "pari") ? "dispari" : "pari";
+
+console.log("Il computer ha scelto : " + sceltaComputer);
+
+//l-utente sceglie un numero tra 1 e 5
+
+let numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
+
+
+// genero un numero random per il computer
+
+let numeroComputer  = Math.floor(Math.random() * 5) +1 ;
+
+// con una funzione stabilisco se il numero e' pari o dispari
+
+function  calcolaPari (numero) {
+
+  return numero % 2 === 0 ;
+
+  
+}
+
+// definisco la variabile somma come somma di numeroUtennte e numero computer;
+
+let somma = numeroUtente + numeroComputer;
+
+console.log("la somma dei numeri scelti dall ' utente dal computer e' : " + somma);
+
+
+//utilizzo la funzione calcola pari per verificare se la somma finale e' pari o dispari usando l'operatore ternario
+
+
+
+let output = calcolaPari(somma) ? "pari" : "dispari" ;
+
+console.log("il risultato  della somma tra il numero scelto dall utente e quello scelto dal pc e' : " + output);
+
+
+// verifico se l'output e' uguale alla scelta utente (pari o dispari) per decretare chi ha vinto
+
+if (output === sceltaUtente) {
+
+  console.log( "complimenti hai vinto ,sei stato fortunato.);
+} 
+
+else {
+
+console.log ("Hai perso" );
+}
